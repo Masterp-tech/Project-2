@@ -2,17 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .red-text {
   color: red;
-}
-
-.red-text:hover {
 }
 
 .m1:hover {
@@ -28,12 +27,13 @@ body {
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
+  /* min-height: 100vh; */
+  width: 100%;
   /* background-color: blueviolet; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -155,26 +155,25 @@ nav ul {
 }
 
 main {
-  min-height: 800vh;
-  width: 97%;
-  /* background-color: pink; */
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   padding-top: 80px;
 }
 
 .main1 {
   display: flex;
-  height: 11%;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  /* padding-left: 50px; */
 }
 
 .sec1 {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: start;
   height: 100%;
-  width: 45%;
-  /* background-color: aqua; */
+  width: 50%;
   padding-left: 10px;
   padding-top: 150px;
 }
@@ -228,24 +227,32 @@ h2 {
 
 .sec2 {
   height: 100%;
-  width: 60%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .sec2 img {
-  height: 100%;
-  width: 1200px;
-  padding-top: 90px;
-  padding-left: 120px;
+  height: 600px;
+  max-width: none;
+  padding-top: 10px;
+  object-fit: contain;
 }
 
 .main2 {
-  width: 97%;
+  width: 100%;
   margin: 0 auto;
   padding: 160px 20px;
   text-align: center;
+}
+
+.main2sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .main2 h1 {
@@ -254,7 +261,7 @@ h2 {
   color: red;
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin: 0;
 }
 
 /* Red underline */
@@ -293,13 +300,6 @@ h2 {
   display: block;
 }
 
-.menu-pics::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.1);
-}
-
 .menu-pics h2 {
   position: absolute;
   left: 10px;
@@ -320,36 +320,49 @@ h2 {
   border-radius: 8px;
   padding: 10px 30px;
   font-weight: 700;
-  margin: 40px auto 0;
+  margin: 0;
   width: fit-content;
 }
 
 .main3 {
-  width: 100vw;
-  height: 55vh;
+  width: 100%;
+  /* height: 55vh; */
+  height: 380px;
   background-color: red;
-  padding: 0px;
+  padding: 0;
   margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .sec3 {
   display: flex;
-  height: 100%;
-  overflow: hidden;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  gap: 70px;
+  height: 100%;
+  width: 900px;
+  /* max-width: 900px; */
+  /* overflow: hidden; */
 }
 
 .phone {
-  width: 50%;
-  height: 650px;
+  width: auto;
+  height: 670px;
   object-fit: contain;
-  padding-left: 200px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  align-self: flex-start;
 }
 
 .mobiletext {
-  width: 50%;
-  padding: 40px 0px 0px 30px;
+  width: 420px;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .mobiletext h2 {
@@ -357,36 +370,357 @@ h2 {
   font-size: 55px;
   line-height: 0.95;
   margin: 0 0 25px;
+  width: auto;
 }
 
 .mobiletext p {
   color: white;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 25px;
-  width: 450px;
+  margin: 0 0 25px;
+  /* width: 450px; */
+  width: auto;
 }
 
 .google-apple {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 15px;
 }
 
-.google-apple > p {
-  color: white;
-}
-
-.google-box,
-.apple-box {
+.app {
   display: flex;
-  /* align-items: center;
-  justify-content: space-between; */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background-color: black;
-  height: 55px;
-  width: 150px;
+  height: 52px;
+  width: 145px;
+  border-radius: 8px;
+  /* padding: 0px 10px; */
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.app img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.app span {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.app small {
+  display: block;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 11px;
+}
+
+.main4 {
+  height: 700px;
+  margin: 50px 0;
+}
+
+.main4 h1 {
+  text-align: center;
+  color: red;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+/* Red underline */
+.main4 h1::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 8px;
+  background-color: red;
   border-radius: 10px;
-  padding: 0px 10px;
+  margin: 0px auto 0;
+  line-height: 0px;
+}
+
+.sec4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 80%;
+}
+
+.about-text {
+  font-size: 17px;
+  line-height: 1.55;
+  width: 50%;
+}
+
+.about-text p {
+  width: 460px;
+}
+
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: #ff161f;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.main5 {
+  background: rgb(255, 189, 200);
+  padding: 90px 8%;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 35px;
+  margin: 0;
+}
+
+.feature-card {
+  height: 330px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: block;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main6 {
+  background: rgb(255, 217, 221);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec5 {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 192px;
+  width: 720px;
+  height: 420px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.newsletter-image {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main6 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  width: 720px;
+  color: black;
+}
+
+.main6 p {
+  font-size: 14px;
+  width: 720px;
+  margin: 0;
+}
+
+/* Subscribe form */
+
+.subscribe {
+  width: 620px;
+  height: 70px;
+  margin: auto;
+  background: white;
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  font-size: 16px;
+}
+
+.subscribe button {
+  border: none;
+  background: red;
+  color: white;
+  height: 60px;
+  padding: 0 35px;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+.footer {
+  width: 100%;
+  background: red;
+  color: white;
+  min-height: 550px;
+  padding: 80px 20px 0;
+}
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+  width: 100%;
+  height: 425px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+.footer-column {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+}
+
+.footer-logo {
+  width: 190px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.footer-column h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: white;
+  width: auto;
+}
+
+.footer-column p {
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+
+.brand-column h2 {
+  margin-top: 0;
+}
+
+.contact-title {
+  margin-top: 40px !important;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-section {
+  margin-top: 65px;
+}
+
+.social-section h2 {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.feedback-column {
+  padding-left: 10px;
+}
+
+/* .feedback-column h2 {
+  width: 350px;
+} */
+
+.feedback-column p {
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.feedback-btn {
+  border: none;
+  background-color: white;
+  color: red;
+  padding: 20px 24px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feedback-btn:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+}
+
+.feedback-btn span {
+  font-size: 22px;
 }
 
 /* Tablet screen size */
